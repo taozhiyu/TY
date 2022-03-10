@@ -1,3 +1,8 @@
+<span style='text-align: center;'>![GitHub](https://img.shields.io/github/license/taozhiyu/TY)  ![GitHub closed issues by-label](https://img.shields.io/github/issues-closed-raw/taozhiyu/TY/%E2%98%91%EF%B8%8Fkeygen/%E6%B3%A8%E5%86%8C%E6%9C%BA%F0%9F%8E%89?label=%E7%94%9F%E6%88%90%E6%AC%A1%E6%95%B0%2Fkeygen%20times&logo=github)  ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/taozhiyu/TY/keygen?label=%E5%BD%93%E5%89%8D%E7%8A%B6%E6%80%81%2Fnow%20state)
+
+</span>
+
+
 ## HOW TO USE/咋用
 
 1. 想办法找到我重新打包的补丁

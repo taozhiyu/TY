@@ -22,6 +22,8 @@ module.exports = async ({
   }
 
   if (context.payload.issue.title === 'keygen') {
+    let showerror = true;
+
     try {
       const info = context.payload.issue.body;
       const commMatch = info.replace(/\r/g, '').match(/<!--.+-->/s);
@@ -31,6 +33,7 @@ module.exports = async ({
 
         if (conf.length === 3) {
           const key = KEYGEN_JS_CODE(...conf);
+          showerror = false;
           await endWithComment(`您的离线激活码为/Your offline activation code is:
 
 \`+${key}\`
@@ -46,15 +49,15 @@ It is best to add the following interception to the \`host\` to prevent network 
 0.0.0.0 dian.typora.com.cn
 0.0.0.0 typora.com.cn
 \`\`\``, true);
-          return
+          return;
         }
       }
 
-      await endWithComment('无法正确匹配到配置信息\n\nCan not match the configuration information correctly.');
+      if (showerror) await endWithComment('无法正确匹配到配置信息\n\nCan not match the configuration information correctly.');
       return;
     } catch (error) {
       await endWithComment('激活码计算过程中发生错误\n\nAn error occurred during activation code calculation');
-      return
+      return;
     }
   } else {
     await endWithComment();
